@@ -1,0 +1,10 @@
+h1 Listing Articles
+table
+  tr
+    th Title
+    th Body
+  = render @articles
+br
+= link_to 'New Article', new_article_path
+br
+= link_to 'Home', root_path
