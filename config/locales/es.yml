@@ -1,0 +1,17 @@
+es:
+  home: Inicio
+  back: Atrás
+  article:
+    new: Nuevo Artículo
+    delete: Eliminar
+    show: Ver
+    edit: Editar
+    edit_title: Edita tu artículo
+    all: Todos los artículos
+    title: Título
+    body: Contenido
+  comment:
+    singular: Comentario
+    plural: Comentarios
+    empty: No hay comantarios
+    add: Deja un comentario

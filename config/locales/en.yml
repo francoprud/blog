@@ -20,4 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  home: Home
+  back: Back
+  article:
+    new: New Article
+    delete: Delete
+    show: Show
+    edit: Edit
+    edit_title: Edit your Article
+    all: All the articles
+    title: Title
+    body: Body
+  comment:
+    singular: Comment
+    plural: Comments
+    empty: There are no comments
+    add: Add a comment

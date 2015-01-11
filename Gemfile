@@ -32,7 +32,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Enables Slim templates
 gem 'slim-rails'
 
+# Use for authentication
 gem 'devise'
+
+# Rails Internationalization (I18n) API
+gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -47,7 +51,12 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  # Provides a live shell in the browser when an error ocurrs
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :assets do
+  gem 'twitter-bootstrap-rails'
 end
 

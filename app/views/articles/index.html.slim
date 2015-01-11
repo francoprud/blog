@@ -1,11 +1,14 @@
-h1 Listing Articles
+h1
+  = t('article.all')
 table
   tr
-    th Title
-    th Body
+    th
+      = t('article.title')
+    th
+      = t('article.body')
   = render @articles
 - if user_signed_in?
   br
-  = link_to 'New Article', new_article_path
+  = link_to t('article.new'), new_article_path
 br
-= link_to 'Home', root_path
+= link_to t('home'), root_path

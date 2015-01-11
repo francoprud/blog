@@ -3,16 +3,19 @@ h1
 p
   = @article.body
 - if user_equal_id(@article.user_id)
-  = link_to 'Edit Article', edit_article_path(@article)
+  = link_to t('article.edit'), edit_article_path(@article)
 
-h2 Comments
+h2
+  = t('comment.plural')
 - if @article.comments.empty?
-  p There are no comments
+  p
+    = t('comment.empty')
 - else
   = render @article.comments
 
 - if user_signed_in?
-  h2 Add a comment
+  h2
+    = t('comment.add')
   = form_for [@article, @article.comments.build] do |f|
     p
       = f.label :body
@@ -21,4 +24,4 @@ h2 Comments
     p
       = f.submit
 br
-= link_to 'Back', articles_path
+= link_to t('back'), articles_path
