@@ -2,7 +2,8 @@ h1
   = @article.title
 p
   = @article.body
-= link_to 'Edit Article', edit_article_path(@article)
+- if user_equal_id(@article.user_id)
+  = link_to 'Edit Article', edit_article_path(@article)
 
 h2 Comments
 - if @article.comments.empty?
@@ -10,13 +11,14 @@ h2 Comments
 - else
   = render @article.comments
 
-h2 Add a comment
-= form_for [@article, @article.comments.build] do |f|
-  p
-    = f.label :body
-    br
-    = f.text_area :body
-  p
-    = f.submit
+- if user_signed_in?
+  h2 Add a comment
+  = form_for [@article, @article.comments.build] do |f|
+    p
+      = f.label :body
+      br
+      = f.text_area :body
+    p
+      = f.submit
 br
 = link_to 'Back', articles_path

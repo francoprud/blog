@@ -4,7 +4,8 @@ table
     th Title
     th Body
   = render @articles
-br
-= link_to 'New Article', new_article_path
+- if user_signed_in?
+  br
+  = link_to 'New Article', new_article_path
 br
 = link_to 'Home', root_path

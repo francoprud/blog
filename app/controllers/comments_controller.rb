@@ -5,11 +5,20 @@ class CommentsController < ApplicationController
 
     @comment = @article.comments.create(comment_params)
     if @comment.valid?
+      current_user.comments << @comment
       redirect_to article_path(@article)
     else
-      # No se pudo crear el comentario
+      # No esta bien el comentario
       redirect_to article_path(@article)
     end
+    /@comment = current_user.comments.build(comment_params)
+    @comment.article_id = @article.id
+    if @comment.save
+      redirect_to article_path(@article)
+    else
+      # No esta bien el comentario
+      redirect_to article_path(@article)
+    end/
   end
 
   private

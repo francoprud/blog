@@ -1,2 +1,4 @@
 p
   = comment.body
+  br
+  = link_to "#{User.find(comment.user_id).email}", user_path(comment.user_id)

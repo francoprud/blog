@@ -1,0 +1,10 @@
+h1
+  = @user.email
+p
+  strong User since:
+  = @user.created_at
+br
+- if @user.id == current_user.id
+  = link_to 'Change password', edit_user_registration_path
+br
+= link_to 'Home', root_path

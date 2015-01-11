@@ -1,3 +1,10 @@
 h1 My Blog
 p Welcome to My Blog
 = link_to 'Articles', articles_path
+br
+- if user_signed_in?
+  = link_to 'My User', user_path(current_user)
+  br
+  = link_to 'Logout', destroy_user_session_path, method: :delete, url: root_path
+- else
+  = link_to 'Login', user_session_path
