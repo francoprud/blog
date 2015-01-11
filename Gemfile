@@ -56,7 +56,4 @@ group :development, :test do
   gem 'binding_of_caller'
 end
 
-group :assets do
-  gem 'twitter-bootstrap-rails'
-end
 
