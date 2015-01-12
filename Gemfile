@@ -58,3 +58,6 @@ end
 
 # Use for adding style to the website
 gem "twitter-bootstrap-rails"
+
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'josevalim/inherited_resources', branch: 'rails-4-2'
