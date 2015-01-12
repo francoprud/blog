@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def create
     @article = Article.find(params[:article_id])
 
@@ -11,14 +10,6 @@ class CommentsController < ApplicationController
       # No esta bien el comentario
       redirect_to article_path(@article)
     end
-    /@comment = current_user.comments.build(comment_params)
-    @comment.article_id = @article.id
-    if @comment.save
-      redirect_to article_path(@article)
-    else
-      # No esta bien el comentario
-      redirect_to article_path(@article)
-    end/
   end
 
   private
