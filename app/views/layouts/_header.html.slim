@@ -1,0 +1,11 @@
+nav.navbar.navbar-default
+  .container
+      = link_to 'BLOG', root_path, class: 'navbar-brand'
+      - if user_signed_in?
+        = link_to 'Logout', destroy_user_session_path, method: :delete, url: root_path, class: 'navbar-brand pull-right'
+        = link_to user_path(current_user), class: 'navbar-brand pull-right' do
+          span.glyphicon.glyphicon-pencil
+          | My Account
+        end
+      - else
+        = link_to 'Login', user_session_path, class: 'navbar-brand pull-right'
