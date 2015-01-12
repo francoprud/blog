@@ -1,5 +1,3 @@
-h1 My Blog
-p Welcome to My Blog
 = link_to 'Articles', articles_path
 br
 - if user_signed_in?
@@ -8,3 +6,5 @@ br
   = link_to 'Logout', destroy_user_session_path, method: :delete, url: root_path
 - else
   = link_to 'Login', user_session_path
+  br
+  = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
