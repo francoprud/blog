@@ -50,4 +50,6 @@ Rails.application.configure do
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
     :domain => AppConfiguration.for(:mandrill).domain, # your domain to identify your server when connecting
   }
+
+  config.serve_static_files = true
 end

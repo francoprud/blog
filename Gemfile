@@ -70,5 +70,7 @@ gem 'sidekiq'
 
 gem 'app_configuration'
 
-gem 'railsstrap'
+group :production do
+  gem 'rails_12factor'
+end
 
