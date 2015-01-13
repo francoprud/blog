@@ -43,6 +43,12 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
+  # hacerlo genérico!
+  def send_last_ten
+    LastArticlesWorker.perform_async(current_user.id)
+    render status: 200, nothing: true, message: 'todo ok'
+  end
+
   private
 
   def article_params

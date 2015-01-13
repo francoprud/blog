@@ -1,3 +1,4 @@
+#alert-div
 h1
   = t('article.all')
 table
@@ -9,6 +10,9 @@ table
   = render @articles
 - if user_signed_in?
   br
+  = link_to t('article.send', count: 10), '#', id: 'send-last-ten'
+  br
   = link_to t('article.new'), new_article_path
+
 br
 = link_to t('home'), root_path

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  # Make use of except!
   before_action :authenticate_user!
 
   def index

@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   resources :articles do
     resources :comments
+    collection do
+      get :send_last_ten
+    end
   end
 
   resources :users, only: [:index, :show]
