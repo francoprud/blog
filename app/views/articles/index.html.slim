@@ -1,3 +1,4 @@
+#alert-div
 .row
   .col-md-8
     .list-group
@@ -9,4 +10,7 @@
       = User.count
 - if user_signed_in?
   br
+  = link_to t('article.send', count: 10), '#', id: 'send-last-ten'
+  br
   = link_to t('article.new'), new_article_path, class: 'btn btn-primary'
+

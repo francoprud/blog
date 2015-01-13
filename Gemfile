@@ -56,10 +56,19 @@ group :development, :test do
   gem 'binding_of_caller'
 end
 
-# Use for adding style to the website
-gem "twitter-bootstrap-rails"
-
-
 gem 'rubocop', require: false
 
 gem 'omniauth-facebook'
+
+# Use for adding style to the website
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'josevalim/inherited_resources', branch: 'rails-4-2'
+
+gem 'sidekiq'
+
+gem 'app_configuration'
+
+gem 'railsstrap'
+

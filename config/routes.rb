@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users
   get 'static_pages/home'
 
   resources :articles do
     resources :comments
+    collection do
+      get :send_last_ten
+    end
   end
 
   resources :users, only: [:index, :show]

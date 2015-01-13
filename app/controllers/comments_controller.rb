@@ -4,7 +4,8 @@ class CommentsController < ApplicationController
 
     @comment = @article.comments.create(comment_params)
     if @comment.valid?
-      current_user.comments << @comment
+      @comment.user = current_user
+      # current_user.comments << @comment
       redirect_to article_path(@article)
     else
       # No esta bien el comentario
