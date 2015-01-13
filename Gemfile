@@ -59,4 +59,7 @@ end
 # Use for adding style to the website
 gem "twitter-bootstrap-rails"
 
+
 gem 'rubocop', require: false
+
+gem 'omniauth-facebook'

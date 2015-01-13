@@ -1,14 +1,12 @@
-h1
-  = t('article.all')
-table
-  tr
-    th
-      = t('article.title')
-    th
-      = t('article.body')
-  = render @articles
+.row
+  .col-md-8
+    .list-group
+      = render @articles
+  .col-md-4
+    h4.text-center
+      = t('user.count')
+    h4.text-center
+      = User.count
 - if user_signed_in?
   br
-  = link_to t('article.new'), new_article_path
-br
-= link_to t('home'), root_path
+  = link_to t('article.new'), new_article_path, class: 'btn btn-primary'

@@ -1,11 +1,11 @@
-nav.navbar.navbar-default
+nav.navbar.navbar-default.navbar-main
   .container
-      = link_to 'BLOG', root_path, class: 'navbar-brand'
+      = link_to 'BLOG', root_path, class: 'navbar-blog btn'
       - if user_signed_in?
-        = link_to 'Logout', destroy_user_session_path, method: :delete, url: root_path, class: 'navbar-brand pull-right'
-        = link_to user_path(current_user), class: 'navbar-brand pull-right' do
+        = link_to 'Logout', destroy_user_session_path, method: :delete, url: root_path, class: 'navbar-btn btn pull-right'
+        = link_to user_path(current_user), class: 'navbar-btn btn pull-right' do
           span.glyphicon.glyphicon-pencil
           | My Account
         end
       - else
-        = link_to 'Login', user_session_path, class: 'navbar-brand pull-right'
+        = link_to 'Login', user_session_path, class: 'navbar-btn btn pull-right'

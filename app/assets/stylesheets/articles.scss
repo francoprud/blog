@@ -1,3 +1,32 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.btn-article-action {
+  height: 20px;
+  font-size: 12px;
+  color: #FFF;
+  &:hover {
+    text-decoration: none;
+    color: #FFF;
+  }
+  border-radius: 5px;
+  padding: 3px;
+  margin: 0 2px;
+}
+
+.btn-article-delete {
+  background-color: #D9534F;
+}
+
+.btn-article-edit {
+  background-color: #44C767;
+}
+
+.btn-article-username {
+  background-color: #428BCA;
+}
+
+.article-list {
+  margin-top: 10px;
+}
