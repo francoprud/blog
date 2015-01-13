@@ -1,12 +1,10 @@
-tr
-  td
+= link_to article_path(article), class: 'list-group-item article-list' do
+  h4.list-group-item-heading
     = article.title
-  td
-    = article.body
-  td
-    = link_to "#{User.find(article.user_id).email}", user_path(article.user_id)
+  p.list-group-item-text
+    = article.body.first(200)
+  = link_to "#{User.find(article.user_id).email}", user_path(article.user_id), class: 'btn-article-action btn-article-username'
   - if user_equal_id(article.user_id)
-    td
-      = link_to t('article.delete'), article_path(article), method: :delete
-  td
-    = link_to t('article.show'), article_path(article)
+    = link_to t('article.delete'), article_path(article), method: :delete, class: 'pull-right btn-article-action btn-article-delete'
+    = link_to t('article.edit'), edit_article_path(article), method: :delete, class: 'pull-right btn-article-action btn-article-edit'
+

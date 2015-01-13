@@ -1,0 +1,31 @@
+/*
+  ***************
+  HEADER NAVBAR
+  ***************
+*/
+
+.navbar-main {
+  background-color: #005DAB
+}
+
+.navbar-blog {
+  font-size: 30px;
+  color: #FFF;
+  font-family: "Times New Roman", Georgia, Serif;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+    color: #FFF;
+  }
+}
+
+.navbar-btn {
+  font-size: 24px;
+  color: #FFF;
+  font-family: "Times New Roman", Georgia, Serif;
+  vertical-align: middle;
+  &:hover {
+    text-decoration: none;
+    color: #FFF;
+  }
+}

@@ -36,3 +36,5 @@ en:
     plural: Comments
     empty: There are no comments
     add: Add a comment
+  user:
+    count: Number of registered users

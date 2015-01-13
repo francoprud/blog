@@ -15,3 +15,5 @@ es:
     plural: Comentarios
     empty: No hay comantarios
     add: Deja un comentario
+  user:
+    count: Cantidad de usuarios registrados
