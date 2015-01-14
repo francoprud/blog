@@ -13,3 +13,5 @@
 /tmp
 
 .mandrill.yml
+
+dump.rdb
