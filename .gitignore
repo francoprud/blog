@@ -13,5 +13,5 @@
 /tmp
 
 ./.mandrill.yml
-
+./.facebook.yml
 ./dump.rdb
