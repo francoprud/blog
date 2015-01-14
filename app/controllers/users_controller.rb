@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  # Make use of except!
-  before_action :authenticate_user!
+  # Make use of except! Maybe crash with Pundit
+  # before_action :authenticate_user!
 
   def index
     @users = User.all

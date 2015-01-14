@@ -1,18 +1,22 @@
 class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
+    authorize @article
   end
 
   def index
     @articles = Article.all
+    authorize Article
   end
 
   def new
     @article = Article.new
+    authorize @article
   end
 
   def create
     @article = current_user.articles.create(article_params)
+    authorize @article
 
     if @article.valid?
       redirect_to articles_path
@@ -23,10 +27,12 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    authorize @article
   end
 
   def update
     @article = Article.find(params[:id])
+    authorize @article
 
     if @article.update(article_params)
       redirect_to article_path(@article)
@@ -37,6 +43,8 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
+    authorize @article
+
     @article.destroy
 
     redirect_to articles_path
@@ -44,6 +52,8 @@ class ArticlesController < ApplicationController
 
   # hacerlo genérico!
   def send_last_ten
+    authorize Article
+
     LastArticlesWorker.perform_async(current_user.id)
     render status: 200, nothing: true, message: 'todo ok'
   end

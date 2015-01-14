@@ -10,6 +10,7 @@ es:
     all: Todos los artículos
     title: Título
     body: Contenido
+    send: Enviarme los últimos %{count} artículos
   comment:
     singular: Comentario
     plural: Comentarios
