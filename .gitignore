@@ -12,6 +12,6 @@
 !/log/.keep
 /tmp
 
-.mandrill.yml
+./.mandrill.yml
 
-dump.rdb
+./dump.rdb
