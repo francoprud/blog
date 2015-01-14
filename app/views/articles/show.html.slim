@@ -2,9 +2,10 @@ h1
   = @article.title
 p
   = @article.body
-- if user_equal_id(@article.user_id)
+- if policy(@article).edit?
   = link_to t('article.edit'), edit_article_path(@article)
-
+  br
+  = link_to t('article.delete'), article_path(@article), method: :delete
 h2
   = t('comment.plural')
 - if @article.comments.empty?

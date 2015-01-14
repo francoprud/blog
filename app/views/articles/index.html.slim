@@ -8,9 +8,9 @@
       = t('user.count')
     h4.text-center
       = User.count
+    - if user_signed_in?
+      = link_to t('article.send', count: 10), '#', id: 'send-last-ten', class: ' btn btn-success'
 - if user_signed_in?
-  br
-  = link_to t('article.send', count: 10), '#', id: 'send-last-ten'
   br
   = link_to t('article.new'), new_article_path, class: 'btn btn-primary'
 

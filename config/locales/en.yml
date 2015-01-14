@@ -31,7 +31,7 @@ en:
     all: All the articles
     title: Title
     body: Body
-    send: Send me last %{count} emails
+    send: Send me last %{count} articles
   comment:
     singular: Comment
     plural: Comments
