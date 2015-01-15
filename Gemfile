@@ -58,7 +58,7 @@ end
 
 gem 'rubocop', require: false
 
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '1.4.0'
 
 # Use for adding style to the website
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
