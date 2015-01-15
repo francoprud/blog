@@ -259,4 +259,6 @@ Devise.setup do |config|
 
   config.omniauth :facebook, AppConfiguration.for(:facebook).app_id,
                              AppConfiguration.for(:facebook).app_secret
+  config.omniauth :google_oauth2, AppConfiguration.for(:google).client_id,
+                                  AppConfiguration.for(:google).client_secret
 end
