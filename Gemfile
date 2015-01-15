@@ -59,7 +59,6 @@ end
 gem 'rubocop', require: false
 
 gem 'omniauth-facebook', '1.4.0'
-
 gem "omniauth-google-oauth2"
 
 # Use for adding style to the website
