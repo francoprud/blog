@@ -12,7 +12,7 @@
 !/log/.keep
 /tmp
 
-./.mandrill.yml
-./.facebook.yml
-./.google.yml
-./dump.rdb
+.mandrill.yml
+.facebook.yml
+.google.yml
+dump.rdb
