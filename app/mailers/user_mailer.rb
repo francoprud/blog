@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
   end
 
-  def lastNarticles(articles,user)
+  def last_ten_articles(articles, user)
     @articles = articles
     @user = user
     mail(to: @user.email, subject: 'Last 10 articles!')

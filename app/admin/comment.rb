@@ -1,3 +1,2 @@
-ActiveAdmin.register Comment, :as => "User Comments" do
-
+ActiveAdmin.register Comment, as: 'User Comments' do
 end

@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-  # hacerlo genérico!
+  # make it generic
   def send_last_ten
     authorize Article
 

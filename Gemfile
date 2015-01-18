@@ -54,6 +54,8 @@ group :development, :test do
   # Provides a live shell in the browser when an error ocurrs
   gem 'better_errors'
   gem 'binding_of_caller'
+
+  gem 'rspec-rails'
 end
 
 gem 'rubocop', require: false
