@@ -1,8 +1,8 @@
 require "rails_helper"
 
 describe ArticlesController do
-  let(:article) { Article.create(title: 'a' * 10, body: 'a' * 20) }
-  let(:user) { User.create(email: 'asdasd@gmail.com', password: 'password')}
+  /let(:article) { create(:article) }/
+  let(:user) { create(:user) }
 
   describe 'POST #create' do
 
@@ -12,10 +12,14 @@ describe ArticlesController do
         user.reload
       end
 
+      it 'increments the articles count' do
+        expect { post :create, article: { title: 'a' * 10, body: 'a' * 20 } }.to change{Article.count}.by(1)
+      end
 
-      xit 'redirects to the article show' do
-        post :create
-        expect(Article.last).to eq article
+      it 'expect last article to be equal' do
+        post :create, article: { title: 'a' * 10, body: 'a' * 20 }
+        Article.last.title.should == 'a' * 10
+        Article.last.body.should == 'a' * 20
       end
     end
   end
