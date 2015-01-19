@@ -1,11 +1,9 @@
 class CommentsController < ApplicationController
   def create
     @article = Article.find(params[:article_id])
-
     @comment = @article.comments.create(comment_params)
     if @comment.valid?
-      @comment.user = current_user
-      # current_user.comments << @comment
+      current_user.comments << @comment
       redirect_to article_path(@article)
     else
       # No esta bien el comentario

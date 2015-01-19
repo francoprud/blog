@@ -32,8 +32,6 @@ describe User do
         expect(user.valid?).to be false
         expect(user.errors.size).to eq(2)
       end
-
-      it 'validates user not to duplicate mails'
     end
 
     context 'Creating a valid user' do
