@@ -1,6 +1,6 @@
 class ArticlePolicy < ApplicationPolicy
   def new?
-    @user
+    @user.present?
   end
 
   def create?
@@ -28,6 +28,6 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def send_last_ten?
-    @user
+    @user.present?
   end
 end
